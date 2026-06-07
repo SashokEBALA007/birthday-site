@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Операция: День Рождения</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.8)),
+    url("https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.panel{
+    width:700px;
+    max-width:90%;
+
+    background:rgba(10,10,10,0.85);
+
+    border:2px solid #ff8c00;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 0 20px rgba(255,140,0,0.4);
+}
+
+.status{
+    color:#ff8c00;
+    font-size:14px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.subtitle{
+    color:#cccccc;
+    margin-bottom:25px;
+}
+
+.timer{
+    border:1px solid #444;
+    padding:15px;
+    margin:25px 0;
+    background:#111;
+    font-size:24px;
+    color:#00ff88;
+}
+
+.mission{
+    text-align:left;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+button{
+    width:100%;
+    padding:18px;
+
+    border:none;
+
+    background:#ff8c00;
+    color:white;
+
+    font-size:20px;
+    font-weight:bold;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ffa733;
+    transform:scale(1.03);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+    <div class="status">
+        СЕКРЕТНАЯ ОПЕРАЦИЯ
+    </div>
+
+    <h1>Операция: Birthday Strike</h1>
+
+    <p class="subtitle">
+        Брифинг для участников спецотряда
+    </p>
+
+    <div class="timer">
+        Дата начала операции: 27 июня 10:20:00
+    </div>
+
+    <div class="mission">
+        <strong>Цель миссии:</strong><br>
+        Собрать элитный отряд бойцов и захватить
+        пейнтбольную арену в честь дня рождения.
+        <br><br>
+
+        <strong>Место:</strong>База "Долгобродская, 43" (Минск, ст. м. "Тракторный завод")
+        <br>
+
+        <strong>Задача:</strong> Подтвердить участие
+        и приготовиться к бою.
+    </div>
+
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Операция: Birthday Strike</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.8)),
+    url("https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===== ЭКРАН 1 ===== */
+
+.screen {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.active {
+    display: flex;
+}
+
+.briefing {
+    width: 700px;
+    max-width: 95%;
+    background: rgba(20,20,20,0.9);
+    border: 2px solid #ff8c00;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255,140,0,0.3);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+button {
+    background: #ff8c00;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== ЭКРАН 2 ===== */
+
+.form-box {
+    width: 700px;
+    max-width: 95%;
+    background: rgba(20,20,20,0.95);
+    border: 2px solid #2ecc71;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(46,204,113,0.2);
+}
+
+input, textarea, select {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #1b1c20;
+    color: white;
+}
+
+label {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.section-title {
+    margin: 15px 0 10px;
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== ЭКРАН 1 ===== -->
+<div id="screen1" class="screen active">
+
+    <div class="briefing">
+        <h1>Операция: Birthday Strike</h1>
+        <p class="subtitle">Секретный брифинг перед миссией</p>
+
+        <p>
+            Цель: захватить пейнтбольную арену и отметить день рождения.<br><br>
+            Подготовьтесь к операции и подтвердите участие.
+        </p>
+
+        <button onclick="goToForm()">
+            ПРИНЯТЬ ЗАДАНИЕ
+        </button>
+    </div>
+
+</div>
+
+<!-- ===== ЭКРАН 2 ===== -->
+<div id="screen2" class="screen">
+
+    <div class="form-box">
+
+        <h2 style="text-align:center; margin-bottom:20px;">
+            АНКЕТА БОЙЦА
+        </h2>
+
+        <!-- ПОЗЫВНОЙ -->
+        <label>Позывной бойца</label>
+        <input id="name" placeholder="Введите имя">
+
+        <!-- УЧАСТИЕ -->
+        <label>Готовы принять участие?</label>
+        <select id="status">
+            <option>Да, буду в строю</option>
+            <option>Не смогу участвовать</option>
+            <option>Пока под вопросом</option>
+        </select>
+
+        <!-- ЕДА -->
+        <div class="section-title">Полевой рацион</div>
+        <label>Есть пожелания по еде?</label>
+        <textarea id="food" placeholder="Шашлык, овощи, соусы и т.д."></textarea>
+
+        <!-- НАПИТКИ -->
+        <div class="section-title">Снабжение отряда</div>
+        <label>Боевая гидратация (напитки)</label>
+        <textarea id="drinks" placeholder="Что хотите пить на операции?"></textarea>
+
+        <!-- ДОП -->
+        <div class="section-title">Секретная информация</div>
+        <label>Что важно знать командованию?</label>
+        <textarea id="extra" placeholder="Аллергии, пожелания, вопросы..."></textarea>
+
+        <button onclick="sendData()">
+            ОТПРАВИТЬ ДАННЫЕ
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+// ===== ПЕРЕКЛЮЧЕНИЕ ЭКРАНОВ =====
+function goToForm() {
+    document.getElementById("screen1").classList.remove("active");
+    document.getElementById("screen2").classList.add("active");
+}
+
+// ===== ОТПРАВКА В TELEGRAM =====
+function sendData() {
+
+    const name = document.getElementById("name").value;
+    const status = document.getElementById("status").value;
+    const food = document.getElementById("food").value;
+    const drinks = document.getElementById("drinks").value;
+    const extra = document.getElementById("extra").value;
+
+    const message =
+`🎯 НОВЫЙ БОЕЦ
+
+👤 Позывной: ${name}
+📌 Статус: ${status}
+
+🍖 Еда:
+${food}
+
+🥤 Напитки:
+${drinks}
+
+⚠️ Инфо:
+${extra}`;
+
+    const TOKEN = "8789045496:AAHOePohvg6YDAOdSJ7Zaco38Ue9Ku67U00";
+    const CHAT_ID = "8697789661";
+
+    fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: message
+        })
+    })
+    .then(res => {
+        alert("МИССИЯ ПРИНЯТА ✔");
+    })
+    .catch(err => {
+        alert("Ошибка отправки ❌");
+        console.log(err);
+    });
+}
+
+</script>
+
+</body>
+</html>
